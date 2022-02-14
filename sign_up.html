@@ -5,42 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Sign In</title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <h1>Facebook</h1>
-            <h5>Connect with friends</h5>
-        </div>
-
-        <div>
-            <h5>Sign Up</h5>
-            <input type="text" id="first-name" placeholder="First Name">
-            <input type="text" id="last-name" placeholder="Last Name">
-            <br/>
-            <input type="text" id="email-input" placeholder="Enter your email">
-            <br/>
-            <input type="text" id="phone-input" placeholder="Enter your phone number">
-            <br/>
-            <input type="password" id="password-input" placeholder="Enter your password">
-            <br/>
-            <input type="password" id="password-input-check" placeholder="Reenter your password">
-            <br/>
-            <p>date of birth</p><input type="date" id="last-name" placeholder="Last Name">
-
-            <p>Gender</p>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            
-            <button id="signup-btn">Sign Up</button>
-            <p>Already have an Account?</p>
-            <button id="login-btn">Log In</button>
-        </div>
+    <div class="h1">
+        <h1 class="h">facebook</h1>
+        <p class="msg">Facebook helps you connect and share with the people in your life.</p>
     </div>
+    <form class="form">
+        <div class="name">
+            <input type="text" placeholder="First Name" class="first">
+            <input type="text" placeholder="Last Name" class="last">
+
+        </div>
+        <input type="username" placeholder="Username" class="first">
+        <input type="text" placeholder="Phone" class="last">
+
+        <input type="text" placeholder="Email" class="input">
+        <input type="password" placeholder="Password" class="first">
+        <input type="text" placeholder="Repeat Password" class="last">
+
+        <label class="label">Date of birth: </label><input type="date" class="last">
+           
+        <div class="gen">
+            <label class="label"  id="gen">Gender: </label>
+            <input type="radio" id="male" name="gender" value="male" class="radio">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" class="radio">
+            <label for="female">Female</label>
+        </div>
+            
+        
+
+
+        <input type="submit" value="Create New Account" class="login-btn"><br>
+        <div class="no">
+
+            <p class="no-account">Don't Have An Account Yet?</p>
+        </div>
+
+        <div class="ca">
+
+            <a href="sign_up.html" class="create-btn">Log In</a>
+        </div>
+    </form>
 </body>
 
 </html>
