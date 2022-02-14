@@ -3,13 +3,13 @@
     padding: 0;
     font-family: 'Questrial', sans-serif;
     background-color: #f0f2f5;
+    margin: auto;
 }
 .h1{
-    position: absolute;
     left: 10%;
     top: 40%;
     width: 550px;
-    
+    text-align: center;
 }
 .h{
     font-size: 60px;
@@ -20,13 +20,11 @@
     font-size: 30px;
 }
 .form{
-    position: absolute;
     background-color: #ffff;
     width: 420px;
     height:auto;
     left: 55%;
     top: 20%;
-    margin: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 9px rgb(184, 184, 184),
                 -1px -1px 5px rgb(184, 184, 184);
@@ -80,7 +78,7 @@
     border: 1px solid rgb(184, 184, 184);
     border-radius: 5px;
     font-size: 15px; 
-      
+    
 }
 .input:focus{
     border: 1px solid #1877f2;
