@@ -112,6 +112,7 @@
     padding: 10px;
     height: 100%; /* Should be removed. Only for demonstration */
     margin-top: 5%;
+    
   }
   .friends-col {
     float: left;
@@ -161,6 +162,22 @@
   margin: 0 10px;
   border-radius: 15px;
 }
-.user-posts{
-    
+.user-posts {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    margin-top: 5%;
+  }
+  .posts-text{
+    float: left;
+    width: 80%;
+    padding: 20px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    margin-top: 7%;
+  }
+.user-posts img{
+    width: 100px;
+    border-radius: 80px;
+    padding: 20px;
 }
