@@ -186,9 +186,10 @@
 }
 .po{
   margin-top: 5%;
-  padding: 5%;
-  background-color: grey;
+  padding: 10px;
+  background-color: white;
   border: 1px solid black;
+  border-radius: 50px;
 }
 .column-po-1 {
   float: left;
@@ -215,4 +216,11 @@
 }
 .status-div{
   margin-top: 5%;
+}
+.likes{
+  
+  padding:2%;
+  
+  
+
 }
