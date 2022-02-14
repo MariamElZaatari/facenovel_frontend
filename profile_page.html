@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="css/profile.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
+    <script src="https://kit.fontawesome.com/5503a86672.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="navbar">
-        <img src="" id="fb-icon" alt="facebook icon">
-        <input id="search" placeholder="search">
-        <img src="" id="notification-icon" alt="notification icon">
-        <img src="" id="settings-icon" alt="settings icon"> <br/>
 
-        
-    </div>
-
-    <div id="pictures">
-        <img src="" id="cover-photo" alt="cover photo"> 
-        <br/>
-        <img src="" id="profile-picture" alt="profile prcture">
-    </div>
-    <div id="bio">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas modi, suscipit dolorum explicabo aliquid id incidunt iste. Repellat magnam hic iure! Doloremque quis, dolores blanditiis in necessitatibus minima nam quod!
-
-        </p>
-    </div>
-
-    <div id="info">
-            Graduation
-            Location
-            ....
-    </div>
-    <div id="timeline">
-        <div id="post">
-            <img src="profile-picture" alt="profile prcture">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque saepe architecto ratione eos excepturi! Consequatur, aut dolorum! Blanditiis, maiores officiis eos quidem a, odit itaque similique, atque natus eveniet laudantium.</p>
-
+    <div class="navbar">
+        <div class="logo-search">
+            <img src="images/logo.webp" alt="" />
+            <div class="search-input" >
+                <span class="material-icons"> search </span>
+                <input type="text" placeholder="Search Facebook"/>
+            </div>
         </div>
-        
+
+        <div class="info">
+            <div class="user-info">
+                <img class="profile-pic"
+                    src="images/profile pic.jpg"
+                    alt="" />
+                <h4>Jogn </h4>
+            </div>
+            <span class="material-icons"> notifications </span>
+            <span class="material-icons"> settings </span>
+            <span class="material-icons"> logout </span>
+        </div>
     </div>
+    <i class="fa-solid fa-gear material-icons"></i>
+    
 </body>
+
 </html>
