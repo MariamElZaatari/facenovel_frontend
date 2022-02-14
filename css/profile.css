@@ -218,9 +218,14 @@
   margin-top: 5%;
 }
 .likes{
-  
   padding:2%;
+}
+.friends-list{
+  margin: 10%;
+}
+.friends-list-img{
   
-  
-
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
 }
