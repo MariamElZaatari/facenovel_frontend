@@ -36,14 +36,13 @@
   padding: 10px;
   margin-left: 50px;
   border-radius: 999px;
-  width: 800px;
 }
 
 .search-input input {
   border: none;
   background-color: transparent;
   outline-width: 0;
-  width: 500px;
+  
 }
 
 .user-info {
@@ -73,5 +72,58 @@
   cursor: pointer;
 }
 
-/* sidebar  */
+@media (max-width: 640px) {
+    .cover-photo {
+      width:100%;
+    }
+}
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .cover-photo{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    
+}
+  .image2 {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    width: 200px;
+    height: 200px;
+    border: 10px #4267B2 solid;
+    border-radius: 200px;
+  }
 
+/* Create three equal columns that floats next to each other */
+.info-column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    margin-top: 5%;
+  }
+  .middle-col {
+    float: left;
+    width: 55%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    margin-top: 5%;
+  }
+  .friends-col {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    margin-top: 5%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
