@@ -69,12 +69,12 @@ password.onclick = function() {
 city.onclick = function() {
     modal.style.display = "block";
     header_text.innerHTML = "Update City Info";
-    text_edit.innerText = "City: ";
+    body.innerHTML= '<div style="padding: 10px;"><label>City: </label > <input type="text"></div>';
 }
 bio.onclick = function() {
     modal.style.display = "block";
     header_text.innerHTML = "Update Bio Info";
-    text_edit.innerText = "Bio: ";
+    body.innerHTML= '<div style="padding: 10px;"><label>City: </label > <input type="text"></div>';
 }
 
 
