@@ -32,6 +32,9 @@
 .material-icons{
     cursor: pointer
   }
+  img{
+    cursor: pointer;
+}
 .first{
     margin: 10px;
     margin-right: 0;

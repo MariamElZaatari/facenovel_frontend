@@ -108,3 +108,6 @@
 .inputs{
     background-color: white;
 }
+img{
+    cursor: pointer;
+}

@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
+  
+}
+
+.logo-search img {
+  height: 40px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 45px;
+}
+.material-icons {
+  cursor: pointer;
+}
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  background-color: white;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.logo-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background-color: #eff2f5;
+  padding: 10px;
+  margin-left: 50px;
+  border-radius: 999px;
+  width: 800px;
+}
+
+.search-input input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+  width: 800px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h4 {
+  margin-left: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info .material-icons {
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+  background-color: #2b69ee;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+.info .material-icons:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .cover-photo {
+    width: 100%;
+  }
+}
+.row {
+  margin-top: 0%;
+}
+.image2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 10px #2b69ee solid;
+  border-radius: 200px;
+  margin-top: 3%;
+}
+
+/* Create three equal columns that floats next to each other */
+.info-column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+.middle-col {
+  float: left;
+  width: 55%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+.friends-col {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.first-element-info {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.bio-text {
+  margin: 5%;
+  background-color: #eff2f5;
+  border-radius: 10px;
+  padding: 20px;
+  text-justify: auto;
+}
+.bio {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.bio-icons {
+  margin-top: 10%;
+}
+.middle-top {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 0;
+  box-shadow: 10px 10px 5px silver;
+}
+
+.panel span {
+  color: silver;
+  font-size: 60px;
+  padding: 5px;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+.user-posts {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+  margin-top: 5%;
+}
+.posts-text {
+  float: left;
+  width: 80%;
+  padding: 20px;
+  height: 100%; /* Should be removed. Only for demonstration */
+  margin-top: 7%;
+}
+.user-posts img {
+  width: 100px;
+  border-radius: 80px;
+  padding: 20px;
+}
+.po {
+  margin-top: 5%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+.column-po-1 {
+  float: left;
+  width: 20%;
+}
+
+.column-po-2 {
+  float: left;
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row-po:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.post-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+.status-div {
+  margin-top: 5%;
+}
+.likes {
+  padding: 2%;
+}
+.friends-list {
+  margin: 10%;
+}
+.friends-list-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+}
+.post{
+    background:#fff;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+}
+
+.post .post-top{
+    display:flex;
+    align-items: center;
+    padding:10px;
+}
+
+.post .post-top .dp{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.post .post-top .dp > img{
+    width:100%;
+    cursor:pointer;
+}
+
+.post .post-top .post-info{
+    margin-left:10px;    
+    font-weight: bold;
+}
+
+.post .post-top .post-info .name{
+    cursor:pointer;
+    font-size:16px;
+}
+
+.post .post-top .post-info .time{
+    font-size:12px;
+    cursor:pointer;
+}
+
+.post .post-top i{
+    margin-left:auto;
+    cursor: pointer;
+}
+
+.post .post-top > input{
+    height:40px;
+    padding:5px 10px;
+    border-radius:25px;
+    outline:none;
+    border:none;
+    flex:1;
+    background:#eee;
+    margin-left:10px;
+}
+
+.post .post-content{
+    font-size:16px;
+    font-weight:normal;
+    padding:10px;
+}
+
+.post .post-content > img{
+    width:100%;
+    margin:5px 0px;
+}
+
+.post .post-bottom{
+    box-shadow: 1px solid #ddd;
+    display:flex;
+    justify-content: flex-start;
+    padding:5px 5px 0px 5px;
+}
+
+.post .post-bottom .action{
+    padding:10px;
+    border-radius:10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.post .post-bottom .action:hover{
+    background:#eee;
+}
+
+.info-column ul{
+    padding:10px 0px;
+}
+
+.info-column ul li{
+    list-style: none;
+    display: flex;
+    padding:.7rem 1rem;
+    align-items: center;
+    transition: .3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-column ul li:hover{
+    background:#ddd;
+}
+
+.info-column ul li > p{
+    margin-left: 10px;
+}
+
+.info-column ul li > i{
+    font-size:20px;
+    color:#2b69ee;
+}
+img{
+    cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: black;
+}

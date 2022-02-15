@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Questrial', sans-serif;
+    
   }
   
 .logo-search img {
@@ -68,7 +69,7 @@
   color: white;
   font-size:30px;
   padding: 5px;
-  background-color: #2e5fc2;
+  background-color: #2b69ee;
   margin: 0 10px;
   border-radius: 15px;
 }
@@ -76,7 +77,98 @@
 .info .material-icons:hover {
   cursor: pointer;
 }
+.post{
+  width:550px;
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+  margin:10px;
+  margin: auto;
+  width: 80%;
+  margin-top: 2%;
+}
 
+.post .post-top{
+  display:flex;
+  align-items: center;
+  padding:10px;
+}
+
+.post .post-top .dp{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.post .post-top .dp > img{
+  width:100%;
+  cursor:pointer;
+}
+
+.post .post-top .post-info{
+  margin-left:10px;    
+  font-weight: bold;
+}
+
+.post .post-top .post-info .name{
+  cursor:pointer;
+  font-size:16px;
+}
+
+.post .post-top .post-info .time{
+  font-size:12px;
+  cursor:pointer;
+}
+
+.post .post-top i{
+  margin-left:auto;
+  cursor: pointer;
+}
+
+.post .post-top > input{
+  height:40px;
+  padding:5px 10px;
+  border-radius:25px;
+  outline:none;
+  border:none;
+  flex:1;
+  background:#eee;
+  margin-left:10px;
+}
+
+.post .post-content{
+  font-size:16px;
+  font-weight:normal;
+  padding:10px;
+}
+
+.post .post-content > img{
+  width:100%;
+  margin:5px 0px;
+}
+
+.post .post-bottom{
+  box-shadow: 1px solid #ddd;
+  display:flex;
+  justify-content: flex-start;
+  padding:5px 5px 0px 5px;
+}
+
+.post .post-bottom .action{
+  padding:10px;
+  border-radius:10px;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+
+.post .post-bottom .action:hover{
+  background:#eee;
+}
+
+.post.create .post-bottom > .action{
+  color:#d74;
+}
 @media (max-width: 640px) {
     .cover-photo {
       width:100%;
@@ -99,7 +191,7 @@
     left: 80px;
     width: 200px;
     height: 200px;
-    border: 10px #4267B2 solid;
+    border: 10px #2b69ee solid;
     border-radius: 200px;
   }
 
@@ -117,6 +209,7 @@
     padding: 10px;
     height: 100%; /* Should be removed. Only for demonstration */
     margin-top: 5%;
+    background: #ecebeb;
     
   }
   .friends-col {
@@ -125,6 +218,7 @@
     padding: 10px;
     height: 100%; /* Should be removed. Only for demonstration */
     margin-top: 5%;
+    background: #ecebeb;
   }
   
   /* Clear floats after the columns */
@@ -137,9 +231,12 @@
       margin-top: 20%;
       text-align: center;
   }
+  img{
+    cursor: pointer;
+}
   .bio-text{
       margin: 5%;
-      background-color: #eff2f5;
+      background-color: white;
       border-radius: 10px;
       padding: 20px;
       text-justify:auto;
@@ -211,6 +308,7 @@
   content: "";
   display: table;
   clear: both;
+  background: #ecebeb;
 }
 .post-img{
   height: 100px;
