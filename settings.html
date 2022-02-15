@@ -62,54 +62,123 @@
 
         </div>
         <div class="column2">
-            
+
 
             <div style="margin: 5%;">
                 <div>
                     <h1>Profile Settings</h1>
                 </div>
+                <br />
                 <div>
                     <table>
-                    
+
                         <tr>
                             <td style="width: 100px;"><strong>Name</strong></td>
                             <td>John Doe</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="name">edit</span></td>
                         </tr>
 
                         <tr>
                             <td style="width: 100px;"><strong>Username</strong></td>
                             <td>john.doe</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="username">edit</span></td>
                         </tr>
                         <tr>
                             <td style="width: 100px;"><strong>Email</strong></td>
                             <td>john@doe.com</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="email">edit</span></td>
                         </tr>
                         <tr>
                             <td style="width: 100px;"><strong>Phone</strong></td>
                             <td>+962155</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="phone">edit</span></td>
                         </tr>
                         <tr>
                             <td style="width: 100px;"><strong>Password</strong></td>
                             <td>last change</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="password">edit</span></td>
                         </tr>
                         <tr>
                             <td style="width: 100px;"><strong>Bio</strong></td>
                             <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="bio">edit</span></td>
                         </tr>
                         <tr>
                             <td style="width: 100px;"><strong>City</strong></td>
                             <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium</td>
-                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                            <td style="text-align: right;"><span class="material-icons" id="city">edit</span></td>
                         </tr>
                     </table>
+
+                    <br /><br />
+                    <table>
+                        <div>
+                            <h2><span class="material-icons" style="margin-right: 2%;">school</span>Education</h2>
+                        </div>
+                        <br />
+                        <tr>
+                            <td style="width: 100px;"><strong>Studied At</strong></td>
+                            <td>University Name</td>
+                            <td style="text-align: right;"><span class="material-icons" id="edit-school">edit</span></td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 100px;"><strong>Date</strong></td>
+                            <td>From 1/1/2021 Till 1/1/2022</td>
+                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                        </tr>
+                        <!-- Trigger/Open The Modal -->
+                        
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2 id="modal-header-text">Update Education Info</h2>
+                                </div>
+                                <div class="modal-body" id="modal-body">
+                                    <div style="padding: 10px;">
+                                        <label>Username: </label > <input type="text">
+                                    </div>
+                                    <!--<div style="padding:10px;">
+                                        <label>From: </label> <input type="date">
+                                        <label>Till: </label> <input type="date">
+                                    </div> -->
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="save-changes">Save Changes</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </table>
+
+
+                    <br /><br />
+                    <table>
+                        <div>
+                            <h2><span class="material-icons" style="margin-right: 2%;">work</span>Work</h2>
+                        </div>
+                        <br />
+                        <tr>
+                            <td style="width: 100px;"><strong>Worked at</strong></td>
+                            <td>Comapny Name</td>
+                            <td style="text-align: right;"><span class="material-icons"id="edit-work">edit</span></td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 100px;"><strong>Date</strong></td>
+                            <td>From 1/1/2021 Till 1/1/2022</td>
+                            <td style="text-align: right;"><span class="material-icons">edit</span></td>
+                        </tr>
+
+                    </table>
                 </div>
-                
+
 
             </div>
         </div>
@@ -118,8 +187,7 @@
 
 
 
-
-
+<script src="Scripts/settings_modal.js"></script>
 </body>
 
 </html>

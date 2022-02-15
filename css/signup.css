@@ -29,6 +29,9 @@
     box-shadow: 2px 2px 9px rgb(184, 184, 184),
                 -1px -1px 5px rgb(184, 184, 184);
 }
+.material-icons{
+    cursor: pointer
+  }
 .first{
     margin: 10px;
     margin-right: 0;
