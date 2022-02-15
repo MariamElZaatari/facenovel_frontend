@@ -47,7 +47,10 @@
   width: 800px;
   
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
 .user-info {
   display: flex;
   align-items: center;
@@ -63,10 +66,9 @@
 }
 
 .info .material-icons {
-  color: white;
-  font-size:30px;
+  color: #2b69ee;
+  font-size: 30px;
   padding: 5px;
-  background-color: #2b69ee;
   margin: 0 10px;
   border-radius: 15px;
 }
@@ -106,7 +108,7 @@
     
     width: 200px;
     height: 200px;
-    border: 10px #2b69ee solid;
+    border: 5px #2b69ee solid;
     border-radius: 200px;
   }
   .col1-content{

@@ -40,14 +40,12 @@
   padding: 10px;
   margin-left: 50px;
   border-radius: 999px;
-  width: 800px;
 }
 
 .search-input input {
   border: none;
   background-color: transparent;
   outline-width: 0;
-  width: 800px;
   
 }
 
@@ -59,17 +57,19 @@
 .user-info h4 {
   margin-left: 10px;
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
 .info {
   display: flex;
   align-items: center;
 }
 
 .info .material-icons {
-  color: white;
+  color: #2b69ee;
   font-size:30px;
   padding: 5px;
-  background-color: #2b69ee;
   margin: 0 10px;
   border-radius: 15px;
 }
@@ -191,7 +191,7 @@
     left: 80px;
     width: 200px;
     height: 200px;
-    border: 10px #2b69ee solid;
+    border: 5px #2b69ee solid;
     border-radius: 200px;
   }
 
