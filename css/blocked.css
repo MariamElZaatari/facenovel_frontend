@@ -1,0 +1,11 @@
+i{
+    color: #3d6cd1;
+    cursor: pointer;
+    font-size: 2em;
+}
+.unblock{
+    margin-right: 10%;
+    font-style: italic;
+    font-size: small;
+    color: silver;
+}
