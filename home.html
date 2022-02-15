@@ -25,12 +25,14 @@
 
         <div class="info">
             <div class="user-info">
-                <img class="profile-pic" src="images/profile pic.jpg" alt="" />
-                <h4>Jogn </h4>
-            </div>
-            <span class="material-icons"> notifications </span>
+                <span class="material-icons"> notifications </span>
             <span class="material-icons"> settings </span>
             <span class="material-icons"> logout </span>
+                <h4>Jogn </h4>
+                <img class="profile-pic" src="images/profile pic.jpg" alt="" />
+                
+            </div>
+            
         </div>
     </div>
 
@@ -39,6 +41,8 @@
             <img class="image2" src="images/prof.jpeg" />
             <div class="first-element-info">
                 <h2>John Doe</h2>
+                <br/>
+                <hr>
             </div>
 
             <ul>
@@ -47,6 +51,7 @@
                     <p>My Profile</p>
                 </li></a>
                 
+
                 <a href="friends.html">
                     <li>
                         <i class="fa fa-user-friends"></i>
@@ -129,31 +134,68 @@
 
 
         </div>
-        <div class="friends-col" style="text-align: center; background:  #ecebeb;">
-            <div class="friends-panel">
-                <div class="friends-list">
-                    <img src="images/profile pic.jpg" class="friends-list-img">
-                    <figcaption>Friend 1</figcaption>
+        <div class="friends-col" style="text-align: center;">
+            <h2>Friends</h2>
+            <div class="friends-section">
+                <div>
+                    <img src="images/profile pic.jpg" class="profile-pic" />
                 </div>
-    
-                <div class="friends-list">
-                    <img src="images/profile pic.jpg" class="friends-list-img">
-                    <figcaption>Friend 1</figcaption>
+                <div>
+                    Friend One
                 </div>
-    
-                <div  class="friends-list">
-                    <img src="images/profile pic.jpg" class="friends-list-img">
-                    <figcaption>Friend 1 </figcaption>
-                </div>
-               
             </div>
+
+            <div class="friends-section">
+                <div>
+                    <img src="images/profile pic.jpg" class="profile-pic" />
+                </div>
+                <div>
+                    Friend One
+                </div>
+            </div>
+
+            <div class="friends-section">
+                <div>
+                    <img src="images/profile pic.jpg" class="profile-pic" />
+                </div>
+                <div>
+                    Friend One
+                </div>
+            </div>
+
+            
             
 
             <button class="friends-btn" id="more-friends"><i class="fa fa-angle-down" style="padding-right: 5px;"></i>All Friends</button>
         </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-header-text">All friends</h2>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <table class="friends-table">
+                        <tr>
+                            <td style="width: 100px;"><img src="images/profile pic.jpg" class="profile-pic"></td>
+                            <td><strong>User 1</strong></td>
+                            <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times"></i></td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+            </div>
+
+        </div>
     </div>
 
-
+<script src="Scripts/home.js"></script>
 </body>
 
 </html>
