@@ -14,23 +14,29 @@
         <h1 class="h">facebook</h1>
         <p class="msg">Facebook helps you connect and share with the people in your life.</p>
     </div>
-    <form class="form">
+    <div class="form">
         <div class="inputs">
-            <input type="text" placeholder="Username" class="input"><br>
-            <input type="password" placeholder="Password" class="input"><br>
+            <input type="text" placeholder="Username" class="input" id="username"><br>
+            <input type="password" placeholder="Password" class="input" id="password"><br>
         </div>
         
-        <input type="submit" value="Log In" class="login-btn"><br>
-        <div class="no">
-            
+        <div id="alert" class="hidden">
+            Username or Password is Wrong.
+        </div>
+
+        <button class="login-btn" onclick="login()" id="login_btn">Log In</button><br>
+        <div class="no">  
             <p class="no-account">Don't Have An Account Yet?</p>
         </div>
-        
+
         <div class="ca">
-            
             <a href="sign_up.html" class="create-btn">Create New Account</a>
         </div>
-    </form>
+
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="Scripts/login.js"></script>
 </body>
 
 </html>
