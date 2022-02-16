@@ -169,3 +169,13 @@
 #gen{
     margin-right: 26%;
 }
+
+.hidden{
+    display: none;
+}
+
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
