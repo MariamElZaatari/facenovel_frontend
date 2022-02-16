@@ -4,6 +4,12 @@
     font-family: 'Questrial', sans-serif;
     background-color: #f0f2f5;
     margin: auto;
+    
+}
+.mydiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .h1{
     left: 10%;
@@ -23,6 +29,7 @@
     background-color: #ffff;
     width: 420px;
     height:auto;
+    margin-top: 10%;
     left: 55%;
     top: 20%;
     border-radius: 10px;
@@ -95,7 +102,7 @@
    
     margin: 10px ;
     padding: 15px;
-    width: 95%;
+    width: 91%;
     border-radius: 5px;
     background-color: #42b72a;
     color: #ffff;
@@ -161,6 +168,7 @@
 }
 .name{
     background-color: white;
+    border-radius: 10px;
 }
 .gen{
     background-color: white;

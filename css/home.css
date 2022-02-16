@@ -382,6 +382,7 @@ a{
   margin: auto;
   padding: 0;
   border: 1px solid #888;
+  border-radius: 20px;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
@@ -420,6 +421,7 @@ a{
   padding: 15px;
   background-color: #2b69ee;
   color: white;
+  border-radius: 20px;
 }
 
 .modal-body {padding: 10px;}
@@ -456,3 +458,17 @@ a{
     height: 40px;
 }
 
+.friends-modal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.friend-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  width: 170px;
+  cursor: pointer;
+  
+}
