@@ -580,4 +580,11 @@ a{
   color: #2b69ee;
 
 }
-
+.friend-btn{
+  position: absolute;
+  padding: 8px;
+  width: 200px;
+  /* margin-right: 75%; */
+  margin-left: 60%;
+  margin-top: 18%;
+}

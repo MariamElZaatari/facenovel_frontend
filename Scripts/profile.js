@@ -1,3 +1,16 @@
+var add_btn = document.getElementById("add-btn");
+
+add_btn.onclick = function(){
+  add_btn.innerHTML = '<i class="fas fa-check" style="margin-left: 5%; margin-right: 5%;"></i>Friends<i class="fas fa-user-check" style="margin-left: 5%; margin-right: 5%;"></i>';
+}
+
+
+
+
+
+
+
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
