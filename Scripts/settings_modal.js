@@ -5,7 +5,6 @@ var modal = document.getElementById("myModal");
 var school = document.getElementById("edit-school");
 var work = document.getElementById("edit-work");
 var name_ = document.getElementById("name");
-var username = document.getElementById("username");
 var email = document.getElementById("email");
 var phone = document.getElementById("phone");
 var password = document.getElementById("password");
@@ -66,52 +65,44 @@ work.onclick = function () {
     }
   }
 }
-name_.onclick = function () {
+
+let work_input = document.getElementById("work-input");
+    let work_date1 = document.getElementById("work-date1");
+    let work_date2 = document.getElementById("work-date2");
+    let uni_input = document.getElementById("uni-input");
+    let date_1_uni = document.getElementById("date1-input");
+    let date_2_uni = document.getElementById("date2-input");
+
+name_.addEventListener("click", Update);
+email.addEventListener("click",Update);
+
+function Update () {
   modal.style.display = "block";
   header_text.innerHTML = "Update Name Info";
-  body.innerHTML = '<div style="padding: 10px;"><label id="text-edit">First Name: </label > <input type="text" id="first-name"><label id="text-edit">Last Name: </label > <input type="text" id="last-name"></div>';
+  body.innerHTML = '<div style="padding: 10px;"><label id="text-edit">First Name: </label > <input type="text" id="first-name"> <label id="text-edit">Last Name: </label > <input type="text" id="last-name"></div> <div style="padding: 10px;"><label>Email: </label > <input type="text" id="email-input"> <label>Phone: </label > <input type="text" id="phone-input"></div> <div style="padding: 10px;"><label>New Password: </label > <input type="password"id="password-input1"> <label>Repeat Password </label > <input type="password" id="password-input2"></div> <div style="padding: 10px;"><label>Bio: </label > <input type="text" id="bio-input"> <label>City: </label > <input type="text" id="city-input"></div>';
   save_button = document.getElementById("save-changes");
   save_button.onclick = function () {
+
     let first_name = document.getElementById("first-name");
     let last_name = document.getElementById("last-name");
+    let email_input = document.getElementById("email-input");
+    let phone_input = document.getElementById("phone-input");
+    let password_input1 = document.getElementById("password-input1");
+    let password_input2 = document.getElementById("password-input2");
+    let bio_input = document.getElementById("bio-input");
+    let city_input = document.getElementById("city-input");
     /* If input field is null --> alert the user*/
-    if (first_name.value == "" || last_name.value == "") {
-      alert("Please enter a name first!");
+    if (first_name.value == "" || last_name.value == "" || email_input.value == "" || phone_input.value == ""
+    || password_input1.value == "" || password_input2.value == "" || !(password_input1 === password_input2)
+     || city_input.value == "" || bio_input.value == "" ) {
+      alert("Insert Properly!");
     } else {
       console.log(first_name.value);
     }
   }
 }
-username.onclick = function () {
-  modal.style.display = "block";
-  header_text.innerHTML = "Update Username Info";
-  body.innerHTML = '<div style="padding: 10px;"><label>Username: </label > <input type="text" id="username-input"></div>';
-  save_button = document.getElementById("save-changes");
-  save_button.onclick = function () {
-    let username_input = document.getElementById("username-input");
-    /* If input field is null --> alert the user*/
-    if (username_input.value == "") {
-      alert("Please enter a username first!");
-    } else {
-      console.log(username_input.value);
-    }
-  }
-}
-email.onclick = function () {
-  modal.style.display = "block";
-  header_text.innerHTML = "Update Email Info";
-  body.innerHTML = '<div style="padding: 10px;"><label>Email: </label > <input type="text" id="email-input"></div>';
-  save_button = document.getElementById("save-changes");
-  save_button.onclick = function () {
-    let email_input = document.getElementById("email-input");
-    /* If input field is null --> alert the user*/
-    if (email_input.value == "") {
-      alert("Please enter email correctly!");
-    } else {
-      console.log(email_input.value);
-    }
-  }
-}
+
+
 
 phone.onclick = function () {
   modal.style.display = "block";
@@ -131,7 +122,7 @@ phone.onclick = function () {
 password.onclick = function () {
   modal.style.display = "block";
   header_text.innerHTML = "Update Password Info";
-  body.innerHTML = '<div style="padding: 10px;"><label>New Password: </label > <input type="password"id="password-input1"><label>Repeat Password </label > <input type="password" id="password-input1"></div>';
+  body.innerHTML = '<div style="padding: 10px;"><label>New Password: </label > <input type="password"id="password-input1"><label>Repeat Password </label > <input type="password" id="password-input2"></div>';
   save_button = document.getElementById("save-changes");
   save_button.onclick = function () {
     let password_input1 = document.getElementById("password-input1");
@@ -158,7 +149,7 @@ city.onclick = function () {
   save_button.onclick = function () {
     let city_input = document.getElementById("city-input");
     /* If input field is null --> alert the user*/
-    if (city.value == "") {
+    if (city_input.value == "") {
       alert("Please enter city correctly!");
     } else {
       console.log(city.value);
@@ -194,4 +185,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-

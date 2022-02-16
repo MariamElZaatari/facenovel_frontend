@@ -42,8 +42,8 @@
             
             <span class="material-icons"> logout </span>
             
-            <a href="profile_page.html" style="margin-right: 5px;"><h4>Jogn </h4></a>
-            <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" /></a>
+            <a href="profile_page.html" style="margin-right: 5px;"><h4 id="fetched-first-name-small">Jogn </h4></a>
+            <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" id="fetched-image-small"/></a>
                 
                 
            
@@ -56,7 +56,7 @@
     <div class="parent">
         <img src="images/cover.jpg" class="cover-photo">
         <div>
-            <img class="image2" src="images/profile pic.jpg" />
+            <img class="image2" src="images/profile pic.jpg" id="fetched-pic-large"/>
             <caption></caption>
         </div>
             <button class="friend-btn" id="add-btn"><i class="fas fa-plus" style="margin-left: 5%; margin-right: 5%;">
@@ -71,12 +71,12 @@
     <div class="row" style="margin-top: 20%; background: #ecebeb;">
         <div class="info-column background: #ecebeb;">
             <div class="first-element-info">
-                <h2>John Doe</h2>
+                <h2><span id="fetched-first-name">John's</span> <span id="fetched-last-name">John's</span> </h2>
             </div>
 
             <div class="bio-text">
-                <h3 class="bio">John's Bio</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum, est ab maxime culpa harum
+                <h3 class="bio"><span id="fetched-first-name-bio">John's</span> Bio </h3>
+                <p id="bio-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum, est ab maxime culpa harum
                     minima esse sunt provident aspernatur fugit, atque maiores! Culpa, molestias architecto ipsam enim
                     cum laudantium.</p>
 
@@ -123,70 +123,39 @@
                     <label>favorites</label>
                 </div>
             </div>
-            <div class="post">
-                <div class="post-top">
-                    <div class="dp">
-                        <img src="images/profile pic.jpg" alt="">
+            <div class="profile-posts-div">
+                <div class="post">
+                    <div class="post-top">
+                        <div class="dp">
+                            <img src="images/profile pic.jpg" alt="" id="post-pic">
+                        </div>
+                        <div class="post-info">
+                            <p class="name"id="poster">User 1</p>
+                            <span class="time" id="post-date">12 hrs ago</span>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
                     </div>
-                    <div class="post-info">
-                        <p class="name">User 1</p>
-                        <span class="time">12 hrs ago</span>
+    
+                    <div class="post-content" id="post-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui molestiae culpa exercitationem,
+                        voluptate at dolor. Nam, tenetur, beatae suscipit debitis magni laborum minus cupiditate, in atque
+                        consequuntur corporis itaque possimus.
                     </div>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-
-                <div class="post-content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui molestiae culpa exercitationem,
-                    voluptate at dolor. Nam, tenetur, beatae suscipit debitis magni laborum minus cupiditate, in atque
-                    consequuntur corporis itaque possimus.
-                </div>
-
-                <div class="post-bottom">
-                    <div class="action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
+    
+                    <div class="post-bottom">
+                        <div class="action">
+                            <i class="far fa-thumbs-up"></i>
+                            <span><span id="counts">4 </span>Like</span>
+                        </div>
+                        <div class="action">
+                            <i class="far fa-heart"></i>
+                            <span>Love</span>
+                        </div>
+    
                     </div>
-                    <div class="action">
-                        <i class="far fa-heart"></i>
-                        <span>Love</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-top">
-                    <div class="dp">
-                        <img src="images/profile pic.jpg" alt="">
-                    </div>
-                    <div class="post-info">
-                        <p class="name">User 1</p>
-                        <span class="time">12 hrs ago</span>
-                    </div>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-
-                <div class="post-content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui molestiae culpa exercitationem,
-                    voluptate at dolor. Nam, tenetur, beatae suscipit debitis magni laborum minus cupiditate, in atque
-                    consequuntur corporis itaque possimus.
-                </div>
-
-                <div class="post-bottom">
-                    <div class="action">
-                        <i class="far fa-thumbs-up"></i>
-                        <span>Like</span>
-                    </div>
-                    <div class="action">
-                        <i class="far fa-heart"></i>
-                        <span>Love</span>
-                    </div>
-                    
                 </div>
             </div>
-
-
-
+    
 
         </div>
         <div class="friends-col" style="text-align: center;">
@@ -249,6 +218,10 @@
                     style="padding-right: 5px;"></i>All Friends</button>
         </div>
     </div>
+
+
+<script src="Scripts/profile_page.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="Scripts/profile_modal.js"></script>
 <script src="Scripts/notification.js"></script>

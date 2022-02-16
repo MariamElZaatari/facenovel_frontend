@@ -42,7 +42,7 @@
             
             <span class="material-icons"> logout </span>
             
-            <a href="profile_page.html" style="margin-right: 5px;"><h4>Jogn </h4></a>
+            <a href="profile_page.html" style="margin-right: 5px;"><h4 id="fetched-first-name">Jogn </h4></a>
             <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" /></a>
                 
                 
@@ -56,7 +56,7 @@
         <div class="info-column" style="background:  #ecebeb;">
             <a href="profile_page.html"><img class="image2" src="images/prof.jpeg" /></a>
             <div class="first-element-info">
-                <a href="profile_page.html"><h2>John Doe</h2></a>
+                <a href="profile_page.html"><h2><span id="fetched-first-name">John</span> <span id="fetched-last-name">Doe</span></h2></a>
                 <br/>
                 <hr>
             </div>
@@ -105,10 +105,10 @@
                     <div class="dp">
                         <img src="./images/prof.jpeg" alt="">
                     </div>
-                    <input type="text" placeholder="What's on your mind, John?" />
+                    <input type="text" id="post-text"placeholder="What's on your mind?" />
                 </div>
                 
-                <div class="post-bottom" style="justify-content: flex-end;">
+                <div id="post-button" class="post-bottom" style="justify-content: flex-end;">
                     <div class="action" style="background-color: #2b69ee ;color: white;">
                         <i class="fa fa-send"></i>
                         <span>Post</span>
@@ -116,7 +116,38 @@
                     
                 </div>
             </div>
-
+            <div id="posts-div">
+                <div class="post">
+                    <div class="post-top">
+                        <div class="dp">
+                          <img src="images/profile pic.jpg" alt="">
+                            
+                        </div>
+                        <div class="post-info">
+                            <a href="#"><p class="name">User 1</p></a>
+                            
+                            <span class="time">12 hrs ago</span>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="post-content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui molestiae culpa exercitationem, voluptate at dolor. Nam, tenetur, beatae suscipit debitis magni laborum minus cupiditate, in atque consequuntur corporis itaque possimus.
+                    </div>
+                    
+                    <div class="post-bottom">
+                        <div class="action">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="action">
+                            <i class="far fa-heart"></i>
+                            <span>Love</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
             <div class="post">
                 <div class="post-top">
                     <div class="dp">
@@ -154,31 +185,34 @@
         </div>
         <div class="friends-col" style="text-align: center;">
             <h2>Friends</h2>
-            <div class="friends-section">
-                <div>
-                    <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
+            <div id="friends-panel-fetched">
+                <div class="friends-section">
+                    <div>
+                        <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
                 </div>
-                <div>
-                    Friend One
+    
+                <div class="friends-section">
+                    <div>
+                        <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
+                </div>
+                <div class="friends-section">
+                    <div>
+                        <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
                 </div>
             </div>
-
-            <div class="friends-section">
-                <div>
-                    <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
-                </div>
-                <div>
-                    Friend One
-                </div>
-            </div>
-            <div class="friends-section">
-                <div>
-                    <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
-                </div>
-                <div>
-                    Friend One
-                </div>
-            </div>
+            
 
             
             
