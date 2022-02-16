@@ -34,15 +34,12 @@ window.onclick = function (event) {
   }
 };
 
-$fetched_first_name;
-$fetched_last_name, $fetched_email;
-$fetched_phone;
-$fetched_bio;
-$fetched_city;
-$fetched_pic;
-//get all user data
+//get user info
+
+var user_id = 63;
 var bodyFormData = new FormData();
-bodyFormData.append("user_id", 63);
+bodyFormData.append("user_id", user_id);
+
 axios({
   method: "post",
   url: "../facebook-back-end/router/router.php/User/read",
@@ -50,49 +47,107 @@ axios({
   headers: { "Content-Type": "multipart/form-data" },
 }).then(function (response) {
   //handle success
-  console.log(response.data);
-  $fetched_first_name = response.data.first_name;
-  $fetched_last_name = response.data.last_name;
-  $fetched_email = response.data.email;
-  $fetched_phone = response.data.phone;
-  $fetched_bio = response.data.bio_text;
-  $fetched_city = response.data.current_city;
-  $fetched_pic = response.data.profile_pic;
-
-  document.getElementById("fetched-first-name").innerText = $fetched_first_name;
-  document.getElementById("fetched-first-name-small").innerText =
-    $fetched_first_name;
-  document.getElementById("fetched-last-name").innerText = $fetched_last_name;
-  document.getElementById("fetched-last-name-bio").innerHTML =
-    $fetched_first_name;
-  document.getElementById("fetched-bio").innerText = $fetched_bio;
-  document.getElementById("fetched-pic-small").src = $fetched_pic;
-  document.getElementById("fetched-image-large").src = $fetched_pic;
+  if (response.status == 200) {
+    console.log(response.data)
+    document.getElementById("fetched-first-name-small").innerText = response.data[0].first_name;
+    document.getElementById("fetched-first-name").innerText = response.data[0].first_name;
+    document.getElementById("fetched-last-name").innerText = response.data[0].last_name;
+    document.getElementById("fetched-first-name-bio").innerText = response.data[0].first_name;
+    document.getElementById("bio-text").innerText = response.data[0].bio_text;
+    document.getElementById("location").innerText = response.data[0].current_city;
+    console.log(response.data[0].first_name);
+  } else {
+    alert("sad");
+  }
 });
 
+//get school info
 
-//get all user pposts
-var post_space = document.getElementById("profile-posts-div");
-var post_pic = document.getElementById("posts-pic");
-var poster = document.getElementById("poster");
-var post_date = document.getElementById("post-date");
-var post_text = document.getElementById("post-text");
-var counts = document.getElementById("counts");
+var user_id = 63;
 var bodyFormData = new FormData();
-bodyFormData.append("user_id", 63);
+bodyFormData.append("user_id", user_id);
 
 axios({
   method: "post",
-  url: "../facebook-back-end/router/router.php/Post/read",
+  url: "../facebook-back-end/router/router.php/Education/getEducationByUserID",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
 }).then(function (response) {
   //handle success
-  console.log(response.data);
-  for (var i = 0; i < response.data.length; i++) {
-    post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/${response.data.profile_pic}" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${response.data.first_name} ${response.data.last_name}</p> <span class="time" id="post-date">${response.data.date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${response.data.text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts">${response.data.numOfLikes} </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
+  if (response.status == 200) {
+    console.log(response.data)
+    document.getElementById("education").innerText = response.data[0].school_name;
+  } else {
+    alert("sad");
   }
 });
 
+//get school info
 
-//friends panel
+var user_id = 63;
+var bodyFormData = new FormData();
+bodyFormData.append("user_id", user_id);
+
+axios({
+  method: "post",
+  url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
+  data: bodyFormData,
+  headers: { "Content-Type": "multipart/form-data" },
+}).then(function (response) {
+  //handle success
+  if (response.status == 200) {
+    console.log(response.data)
+    document.getElementById("work").innerText = response.data[0].company_name;
+  } else {
+    alert("sad");
+  }
+});
+
+//get school info
+
+var user_id = 63;
+var bodyFormData = new FormData();
+bodyFormData.append("user_id", user_id);
+
+axios({
+  method: "post",
+  url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
+  data: bodyFormData,
+  headers: { "Content-Type": "multipart/form-data" },
+}).then(function (response) {
+  //handle success
+  if (response.status == 200) {
+    console.log(response.data)
+    document.getElementById("work").innerText = response.data[0].company_name;
+  } else {
+    alert("sad");
+  }
+});
+
+//get user posts
+
+var user_id = 63;
+var bodyFormData = new FormData();
+bodyFormData.append("user_id", user_id);
+
+axios({
+  method: "post",
+  url: "../facebook-back-end/router/router.php/Post/getPostsByUserID",
+  data: bodyFormData,
+  headers: { "Content-Type": "multipart/form-data" },
+}).then(function (response) {
+  //handle success
+  if (response.status == 200) {
+    console.log(response.data);
+    post_space = document.getElementById("profile-posts-div");
+    for (var i = 0; i < (response.data).length; i++) {
+      post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${response.data[i].first_name} ${response.data[i].last_name}</p> <span class="time" id="post-date">${response.data[i].date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${response.data[i].text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts">${response.data[i].numOfLikes} </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
+    }
+    document.getElementById("count-posts").innerHTML = (response.data).length;
+    //for (var i = 0; i < response.data.length; i++) {
+      //post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${response.data.first_name} ${response.data.last_name}</p> <span class="time" id="post-date">${response.data.date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${response.data.text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts"> </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
+    //}
+  } else {
+    alert("sad");
+  }
+});
