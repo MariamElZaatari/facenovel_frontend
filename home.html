@@ -26,7 +26,18 @@
 
         <div class="info">
             <div class="user-info">
-            <span class="material-icons"> notifications </span>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><span class="material-icons"> notifications </span></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <div class="not-req">
+                          <img src="images/profile pic.jpg" class="profile-pic">
+                          <label>Name</label>
+                          <button class="confirm">Confirm</button>
+                          <button class="delete">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+            
             <a href="settings.html"><span class="material-icons"> settings </span></a>
             
             <span class="material-icons"> logout </span>
@@ -35,7 +46,7 @@
             <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" /></a>
                 
                 
-                
+           
             </div>
             
         </div>
@@ -194,6 +205,8 @@
     </div>
 
 <script src="Scripts/home.js"></script>
+<script src="Scripts/notification.js"></script>
+
 </body>
 
 </html>
