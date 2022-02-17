@@ -1,3 +1,53 @@
+//get user info
+
+var user_id = 63;
+var bodyFormData = new FormData();
+bodyFormData.append("user_id", user_id);
+
+axios({
+  method: "post",
+  url: "../facebook-back-end/router/router.php/User/read",
+  data: bodyFormData,
+  headers: { "Content-Type": "multipart/form-data" },
+}).then(function (response) {
+  //handle success
+  if (response.status == 200) {
+    
+    console.log(response.data)
+    document.getElementById("fetched-name").innerText = `${response.data[0].first_name} ${response.data[0].last_name}` ;
+    document.getElementById("myname").innerText = `${response.data[0].first_name} ${response.data[0].last_name}` ;
+    document.getElementById("h4name").innerText = `${response.data[0].first_name}` ;
+
+    document.getElementById("fetched-email").innerText = response.data[0].email;
+    document.getElementById("fetched-phone").innerText = response.data[0].phone;
+    document.getElementById("fetched-bio").innerText = response.data[0].bio_text;
+    document.getElementById("fetched-city").innerText = response.data[0].current_city;
+    console.log(response.data[0].first_name);
+  } else {
+    alert("sad");
+  }
+});
+
+
+
+var user_id = 63;
+var bodyFormData = new FormData();
+bodyFormData.append("user_id", user_id);
+
+axios({
+  method: "post",
+  url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
+  data: bodyFormData,
+  headers: { "Content-Type": "multipart/form-data" },
+}).then(function (response) {
+  //handle success
+  if (response.status == 200) {
+    console.log(response.data)
+    document.getElementById("work").innerText = response.data[0].company_name;
+  } else {
+    alert("sad");
+  }
+});
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -185,3 +235,6 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
+
+

@@ -177,11 +177,11 @@ axios({
         console.log("no pic")
         profilePic=response.data[i].profile_pic;
         profilePic = "profile pic.jpg";
-        fr_table.innerHTML = `<tr> <td style="width: 100px;"><img src="images/${profilePic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
-        friends_panel.innerHTML = `<div class="friends-section"> <div> <img src="images/${profilePic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}  </div> </div>`;
+        fr_table.innerHTML += `<tr> <td style="width: 100px;"><img src="images/${profilePic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
+        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${profilePic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}  </div> </div>`;
       }else{
-        friends_panel.innerHTML = `<div class="friends-section"> <div> <img src="images/${response.data[i].profile_pic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name} </div> </div>`;
-        fr_table.innerHTML = `<tr> <td style="width: 100px;"><img src="images/${response.data[i].profile_pic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
+        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${response.data[i].profile_pic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name} </div> </div>`;
+        fr_table.innerHTML+= `<tr> <td style="width: 100px;"><img src="images/${response.data[i].profile_pic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
 
       }
 
