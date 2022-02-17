@@ -47,9 +47,6 @@
                     <h4 id="fetched-first-name">Jogn </h4>
                 </a>
                 <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" /></a>
-
-
-
             </div>
 
         </div>
@@ -60,7 +57,7 @@
             <a href="profile_page.html"><img class="image2" src="images/prof.jpeg" /></a>
             <div class="first-element-info">
                 <a href="profile_page.html">
-                    <h2><span id="fetched-first-name">John</span> <span id="fetched-last-name">Doe</span></h2>
+                    <h2><span id="fetched-first-name2">John</span> <span id="fetched-last-name">Doe</span></h2>
                 </a>
                 <br />
                 <hr>
@@ -160,33 +157,37 @@
             <div id="friends-panel-fetched">
 
             </div>
-
-
-
-
-
             <button class="friends-btn" id="more-friends"><i class="fa fa-angle-down"
                     style="padding-right: 5px;"></i>All Friends</button>
         </div>
 
         <!-- The Modal -->
-        <div id="myModal" class="modal">
 
-            <!-- Modal content -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2 id="modal-header-text">All friends</h2>
-                </div>
-                <div class="modal-body" id="modal-body">
-
-                </div>
-
-            </div>
-
-        </div>
     </div>
+    </div>
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="modal-header-text">All friends</h2>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div>
+                    <div>
+                        <img src=""/>
+                        <span>name</span>
+                    </div>
+                    <div>
+                        <span>bio</span>
+                        <i class="fas fa-user-times" id="remove-friend"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="Scripts/home.js"></script>
     <script src="Scripts/notification.js"></script>
