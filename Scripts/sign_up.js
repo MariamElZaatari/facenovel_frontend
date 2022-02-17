@@ -63,8 +63,7 @@ function isInputEmpty() {
 
 }
 button.onclick = function signUp() {
-    var gender = document.querySelector('input[name="gender"]:checked').value;
-
+    
     if (isInputEmpty()) {
         alert.innerText = `All Fields are required.`
         alert.classList.remove("hidden");
@@ -78,6 +77,7 @@ button.onclick = function signUp() {
             alert.classList.add("hidden");
         }, 1500);
     } else {
+        var gender = document.querySelector('input[name="gender"]:checked').value;
         var bodyFormData = new FormData();
         bodyFormData.append('first_name', first_name.value);
         bodyFormData.append('last_name', last_name.value);
@@ -85,6 +85,7 @@ button.onclick = function signUp() {
         bodyFormData.append('phone', phone.value);
         bodyFormData.append('email', email.value);
         bodyFormData.append('password', password.value);
+        bodyFormData.append('password_repeat', password_repeat.value);
         bodyFormData.append('dob', dob.value);
         bodyFormData.append('gender', gender);
 
@@ -96,16 +97,8 @@ button.onclick = function signUp() {
         })
             .then(function ({ data }) {
                 //handle success
-                if (data.status == 200) {
-                    //redirect
-                    window.location.href = "index.html";
-                } else {
-                    alert.innerText="Error creating account, please try again."
-                    alert.classList.remove("hidden");
-                    setTimeout(() => {
-                        alert.classList.add("hidden");
-                    }, 1500);
-                }
+                //redirect
+                window.location.href = "index.html";
             })
     }
 }
