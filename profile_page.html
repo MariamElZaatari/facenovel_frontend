@@ -108,7 +108,7 @@
                 <div class="panel">
                     <span class="material-icons"> supervised_user_circle </span>
                     <br />
-                    <label>42</label>
+                    <label id="friends-count">42</label>
                 </div>
 
                 <div class="panel">
@@ -160,32 +160,35 @@
         </div>
         <div class="friends-col" style="text-align: center;">
             <h2>Friends</h2>
-            <div class="friends-section">
-                <div>
-                    <img src="images/profile pic.jpg" class="profile-pic" />
+            <div id="friends-panel-fetched">
+                <div class="friends-section">
+                    <div>
+                        <img src="images/profile pic.jpg" class="profile-pic" />
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
                 </div>
-                <div>
-                    Friend One
+    
+                <div class="friends-section">
+                    <div>
+                        <img src="images/profile pic.jpg" class="profile-pic" />
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
+                </div>
+    
+                <div class="friends-section">
+                    <div>
+                        <img src="images/profile pic.jpg" class="profile-pic" />
+                    </div>
+                    <div>
+                        Friend One
+                    </div>
                 </div>
             </div>
-
-            <div class="friends-section">
-                <div>
-                    <img src="images/profile pic.jpg" class="profile-pic" />
-                </div>
-                <div>
-                    Friend One
-                </div>
-            </div>
-
-            <div class="friends-section">
-                <div>
-                    <img src="images/profile pic.jpg" class="profile-pic" />
-                </div>
-                <div>
-                    Friend One
-                </div>
-            </div>
+           
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -197,12 +200,12 @@
                     </div>
                     <div class="modal-body" id="modal-body">
                         <table class="friends-table" id="friends-table">
-                            <tr>
+                            <!-- <tr>
                                 <td style="width: 100px;"><img src="images/profile pic.jpg" class="profile-pic"></td>
                                 <td><strong>User 1</strong></td>
                                 <td style="text-align: right;"><label class="unblock">remove friend</label><i
                                         class="fas fa-user-times"></i></td>
-                            </tr>
+                            </tr> -->
 
                         </table>
 

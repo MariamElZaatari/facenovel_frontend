@@ -26,3 +26,23 @@ axios({
 
 
 //friends panel
+friends_panel = document.getElementById("friends-panel-fetched");
+    for (var i = 0; i < (response.data).length; i++) {
+      
+      body.innerHTML = `<div class="friends-modal"><div><img src="images/${response.data.profile_pic[i]}" class="profile-pic"></div><div><strong>${response.data.first_name[i]} ${response.data.last_name[i]}</strong></div><div><label class="unblock">Remove Friend</label><i class="fas fa-user-times" id="remove-friend"></i></div><div><label class="unblock">Add Favorite</label><i class="fas fa-star" id="add-favorite"></i></div></div>`;
+    }
+
+
+     for (var i = 0; i < (response.data).length; i++) {
+      if(response.data[i].profile_pic == null){
+        console.log("no pic")
+        profilePic=response.data[i].profile_pic;
+        profilePic = "profile pic.jpg";
+        friends_panel.innerHTML = `<div class="friends-section"> <div> <img src="images/${profilePic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}</div> </div>`;
+
+      }
+      else{
+        friends_panel.innerHTML = `<div class="friends-section"> <div> <img src="images/${response.data[i].profile_pic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}</div> </div>`;
+
+      }
+    }
