@@ -68,23 +68,6 @@ async function init() {
     });
     //---------------------------
 
-
-    // var bodyFormData = new FormData();
-    // bodyFormData.append("user_id", user_id);
-
-    // axios({
-    //   method: "post",
-    //   url: "../facebook-back-end/router/router.php/Friend/getFriendsByUserID",
-    //   data: bodyFormData,
-    //   headers: { "Content-Type": "multipart/form-data" },
-    // }).then(function ({data}) {
-    //   //handle success
-    //   if (data.status == 200) {
-
-    //     }
-    // });
-
-
     //   ------- See All Friends ---------
     var modal = document.getElementById("myModal");
     var more_friends_btn = document.getElementById("more-friends");
@@ -141,8 +124,8 @@ async function init() {
                 //handle success
                 if (data.status == 200) {
                     //add to posts_div
+                    window.location.href = "home.html";
                 }
-                console.log(response.data);
             })
     }
     //--------------------------
