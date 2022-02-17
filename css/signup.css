@@ -178,6 +178,14 @@
     margin-right: 26%;
 }
 
+#alert{
+    background-color: #FC4F4F;
+    padding: 10px 0 10px 0;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
 .hidden{
     display: none;
 }
