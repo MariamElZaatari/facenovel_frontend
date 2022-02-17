@@ -177,7 +177,7 @@ axios({
         console.log("no pic")
         profilePic=response.data[i].profile_pic;
         profilePic = "profile pic.jpg";
-        fr_table.innerHTML += `<tr> <td style="width: 100px;"><img src="images/${profilePic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
+        fr_table.innerHTML += `<tr> <td style="width: 100px;"><img src="images/${profilePic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" ></i></td> </tr>`;
         friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${profilePic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}  </div> </div>`;
       }else{
         friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${response.data[i].profile_pic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name} </div> </div>`;
@@ -194,25 +194,6 @@ axios({
 
 //remove firend
 var remove = document.getElementById("remove-friend");
-function remove(){
-    //get school info
-
-var user_id = 63;
-var bodyFormData = new FormData();
-bodyFormData.append("user_id", user_id);
-
-axios({
-  method: "post",
-  url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
-  data: bodyFormData,
-  headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
-  //handle success
-  if (response.status == 200) {
-    console.log(response.data)
-    document.getElementById("work").innerText = response.data[0].company_name;
-  } else {
-    alert("sad");
-  }
-});
-}
+remove.onclick = function () {
+  alert("sadas");
+};
