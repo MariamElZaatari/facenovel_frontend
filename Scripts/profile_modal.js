@@ -1,3 +1,4 @@
+var user_id = localStorage.getItem("user_id");
 
 var add_btn = document.getElementById("add-btn");
 
@@ -37,7 +38,6 @@ window.onclick = function (event) {
 
 //get user info
 
-var user_id = 63;
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -46,25 +46,25 @@ axios({
   url: "../facebook-back-end/router/router.php/User/read",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
+}).then(function ({data}) {
   //handle success
-  if (response.status == 200) {
-    console.log(response.data)
-    document.getElementById("fetched-first-name-small").innerText = response.data[0].first_name;
-    document.getElementById("fetched-first-name").innerText = response.data[0].first_name;
-    document.getElementById("fetched-last-name").innerText = response.data[0].last_name;
-    document.getElementById("fetched-first-name-bio").innerText = response.data[0].first_name;
-    document.getElementById("bio-text").innerText = response.data[0].bio_text;
-    document.getElementById("location").innerText = response.data[0].current_city;
-    console.log(response.data[0].first_name);
+  if (data.status == 200) {
+    console.log(data.data)
+    document.getElementById("fetched-first-name-small").innerText = data.data.first_name;
+    document.getElementById("fetched-first-name").innerText = data.data.first_name;
+    document.getElementById("fetched-last-name").innerText = data.data.last_name;
+    document.getElementById("fetched-first-name-bio").innerText = data.data.first_name;
+    document.getElementById("bio-text").innerText = data.data.bio_text;
+    document.getElementById("location").innerText = data.data.current_city;
+    console.log(data.data.first_name);
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
 //get school info
 
-var user_id = 63;
+
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -73,19 +73,19 @@ axios({
   url: "../facebook-back-end/router/router.php/Education/getEducationByUserID",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
+}).then(function ({data}) {
   //handle success
-  if (response.status == 200) {
-    console.log(response.data)
-    document.getElementById("education").innerText = response.data[0].school_name;
+  if (data.status == 200) {
+    console.log(data.data)
+    document.getElementById("education").innerText = data.data.school_name;
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
 //get school info
 
-var user_id = 63;
+
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -94,19 +94,19 @@ axios({
   url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
+}).then(function ({data}) {
   //handle success
-  if (response.status == 200) {
-    console.log(response.data)
-    document.getElementById("work").innerText = response.data[0].company_name;
+  if (data.status == 200) {
+    console.log(data.data)
+    document.getElementById("work").innerText = data.data.company_name;
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
 //get school info
 
-var user_id = 63;
+
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -115,19 +115,19 @@ axios({
   url: "../facebook-back-end/router/router.php/Work/getWorkByUserID",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
+}).then(function ({data}) {
   //handle success
-  if (response.status == 200) {
-    console.log(response.data)
-    document.getElementById("work").innerText = response.data[0].company_name;
+  if (data.status == 200) {
+    console.log(data.data)
+    document.getElementById("work").innerText = data.data.company_name;
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
 //get user posts
 
-var user_id = 63;
+
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -136,26 +136,25 @@ axios({
   url: "../facebook-back-end/router/router.php/Post/getPostsByUserID",
   data: bodyFormData,
   headers: { "Content-Type": "multipart/form-data" },
-}).then(function (response) {
+}).then(function ({data}) {
   //handle success
-  if (response.status == 200) {
-    console.log(response.data);
+  if (data.status == 200) {
+    console.log(data.data);
     post_space = document.getElementById("profile-posts-div");
-    for (var i = 0; i < (response.data).length; i++) {
-      post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${response.data[i].first_name} ${response.data[i].last_name}</p> <span class="time" id="post-date">${response.data[i].date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${response.data[i].text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts">${response.data[i].numOfLikes} </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
+    for (var i = 0; i < (data.data).length; i++) {
+      post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${data.data[i].first_name} ${data.data[i].last_name}</p> <span class="time" id="post-date">${data.data[i].date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${data.data[i].text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts">${data.data[i].numOfLikes} </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
     }
-    document.getElementById("count-posts").innerHTML = (response.data).length;
-    //for (var i = 0; i < response.data.length; i++) {
-      //post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${response.data.first_name} ${response.data.last_name}</p> <span class="time" id="post-date">${response.data.date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${response.data.text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts"> </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
+    document.getElementById("count-posts").innerHTML = (data.data).length;
+    //for (var i = 0; i < data.data.length; i++) {
+      //post_space.innerHTML = `<div class="post"> <div class="post-top"> <div class="dp"> <img src="images/profile pic.jpg" alt="" id="post-pic"> </div> <div class="post-info"> <p class="name"id="poster">${data.data.first_name} ${data.data.last_name}</p> <span class="time" id="post-date">${data.data.date_created}</span> </div> <i class="fas fa-ellipsis-h"></i> </div> <div class="post-content" id="post-text"> ${data.data.text}</div> <div class="post-bottom"> <div class="action"> <i class="far fa-thumbs-up"></i> <span><span id="counts"> </span>Like</span> </div> <div class="action"> <i class="far fa-heart"></i> <span>Love</span> </div> </div> </div>`;
     //}
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
 //get user friends
 
-var user_id = 63;
 var bodyFormData = new FormData();
 bodyFormData.append("user_id", user_id);
 
@@ -188,7 +187,7 @@ axios({
     }
     
   } else {
-    alert("sad");
+    // alert("sad");
   }
 });
 
