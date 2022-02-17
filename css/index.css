@@ -12,11 +12,8 @@
     align-items: center;
 }
 .h1{
-    left: 10%;
-    margin-top: 12%;
     width: 550px;
     text-align: center;
-    margin-bottom: 20px;
 }
 .material-icons{
     cursor: pointer
@@ -98,7 +95,6 @@
     font-size: 15px;
     text-align: center;
     padding-top: 5px;
-    border-top: 1px solid lightslategrey;
     background-color: white;
 }
 .no{
@@ -112,6 +108,7 @@
 }
 .inputs{
     background-color: white;
+    border-radius: 10px;
 }
 img{
     cursor: pointer;
@@ -134,4 +131,11 @@ img{
 button:hover{
     cursor: pointer;
     transform: scale(1.01);
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }

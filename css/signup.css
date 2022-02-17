@@ -12,8 +12,6 @@
     align-items: center;
 }
 .h1{
-    left: 10%;
-    top: 40%;
     width: 550px;
     text-align: center;
 }
@@ -154,7 +152,6 @@
     font-size: 15px;
     text-align: center;
     padding-top: 5px;
-    border-top: 1px solid lightslategrey;
     background-color: white;
 }
 .no{
@@ -194,4 +191,10 @@
 button:hover{
     cursor: pointer;
     transform: scale(1.01);
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }

@@ -2,6 +2,25 @@ async function init() {
 
     var user_id = localStorage.getItem("user_id");
 
+    //---------- Remove Friend -----------
+    // function removeFriend(friend_id) {
+    //     console.log(friend_id);
+
+    //     var bodyFormData = new FormData();
+    //     bodyFormData.append("user_id", user_id);
+    //     bodyFormData.append("friend_id", friend_id);
+
+    //     axios({
+    //         method: "post",
+    //         url: "../facebook-back-end/router/router.php/Friend/delete",
+    //         data: bodyFormData,
+    //         headers: { "Content-Type": "multipart/form-data" },
+    //     }).then(function ({ data }) {
+    //         // window.location.href= "home.html";
+    //     });
+    // }
+    //--------------------------------
+
     //---------Fetch User Info -------
     var bodyFormData = new FormData();
     bodyFormData.append("user_id", user_id);
@@ -83,7 +102,6 @@ async function init() {
 
     // When the user clicks the button, open the modal
     more_friends_btn.onclick = async function () {
-        var friend_id = "";
         modal.style.display = "block";
         var bodyFormData = new FormData();
         bodyFormData.append("user_id", user_id);
@@ -98,35 +116,20 @@ async function init() {
                 friends_list_body.innerHTML = "Add Friends, they are waiting for you."
             }
             for (var i = 0; i < data.length; i++) {
+                friend_id = parseInt(data[i].friend_id);
                 result += `
                 <div class="friends-section"> 
                 <div> <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
                 </div> 
                 <div> ${data[i].first_name} ${data[i].last_name}
-                <button id="remove_friend_btn" onclick="removeFriend(${data[i].friend_id})"><i class="fas fa-user-times" ></i></button>
+                <button id="remove_friend_btn" onclick="removeFriend(${friend_id})"><i class="fas fa-user-times" ></i></button>
                 </div> 
                 </div>`;
                 friends_list_body.innerHTML = result;
             }
         });
     }
-    
-    //---------- Remove Friend -----------
-        // function removeFriend(friend_id){
-        // var bodyFormData = new FormData();
-        // bodyFormData.append("user_id", user_id);
-        // bodyFormData.append("friend_id", user_id);
 
-        // axios({
-        //     method: "post",
-        //     url: "../facebook-back-end/router/router.php/Friend/delete",
-        //     data: bodyFormData,
-        //     headers: { "Content-Type": "multipart/form-data" },
-        // }).then(function ({ data }) {
-
-        // });
-        // }
-    //------------------------------------
 
 
     //---------- Post New Status -----------
