@@ -72,12 +72,18 @@ async function init() {
     var modal = document.getElementById("myModal");
     var more_friends_btn = document.getElementById("more-friends");
     var friends_list_body = document.getElementById("modal-body");
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
     more_friends_btn.onclick = async function () {
+        var friend_id = "";
         modal.style.display = "block";
         var bodyFormData = new FormData();
         bodyFormData.append("user_id", user_id);
@@ -93,16 +99,35 @@ async function init() {
             }
             for (var i = 0; i < data.length; i++) {
                 result += `
-                            <div class="friends-section"> 
-                                <div> <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
-                                </div> 
-                                <div> ${data[i].first_name} ${data[i].last_name} 
-                                </div> 
-                            </div>`;
+                <div class="friends-section"> 
+                <div> <a href="#"><img src="images/profile pic.jpg" class="profile-pic" /></a>
+                </div> 
+                <div> ${data[i].first_name} ${data[i].last_name}
+                <button id="remove_friend_btn" onclick="removeFriend(${data[i].friend_id})"><i class="fas fa-user-times" ></i></button>
+                </div> 
+                </div>`;
+                friends_list_body.innerHTML = result;
             }
-            friends_list_body.innerHTML = result;
         });
     }
+    
+    //---------- Remove Friend -----------
+        // function removeFriend(friend_id){
+        // var bodyFormData = new FormData();
+        // bodyFormData.append("user_id", user_id);
+        // bodyFormData.append("friend_id", user_id);
+
+        // axios({
+        //     method: "post",
+        //     url: "../facebook-back-end/router/router.php/Friend/delete",
+        //     data: bodyFormData,
+        //     headers: { "Content-Type": "multipart/form-data" },
+        // }).then(function ({ data }) {
+
+        // });
+        // }
+    //------------------------------------
+
 
     //---------- Post New Status -----------
     var button = document.getElementById("post-button");

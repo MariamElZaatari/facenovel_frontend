@@ -1,11 +1,11 @@
 var user_id = localStorage.getItem("user_id");
 
-var add_btn = document.getElementById("add-btn");
+// var add_btn = document.getElementById("add-btn");
 
-add_btn.onclick = function () {
-  add_btn.innerHTML =
-    '<i class="fas fa-check" style="margin-left: 5%; margin-right: 5%;"></i>Friends<i class="fas fa-user-check" style="margin-left: 5%; margin-right: 5%;"></i>';
-};
+// add_btn.onclick = function () {
+//   add_btn.innerHTML =
+//     '<i class="fas fa-check" style="margin-left: 5%; margin-right: 5%;"></i>Friends<i class="fas fa-user-check" style="margin-left: 5%; margin-right: 5%;"></i>';
+// };
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -176,11 +176,11 @@ axios({
         console.log("no pic")
         profilePic=response.data[i].profile_pic;
         profilePic = "profile pic.jpg";
-        fr_table.innerHTML += `<tr> <td style="width: 100px;"><img src="images/${profilePic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" ></i></td> </tr>`;
-        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${profilePic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}  </div> </div>`;
+        fr_table.innerHTML += `<tr> <td style="width: 100px;"><img src="images/profile pic.jpg" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" ></i></td> </tr>`;
+        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/profile pic.jpg" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name}  </div> </div>`;
       }else{
-        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/${response.data[i].profile_pic}" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name} </div> </div>`;
-        fr_table.innerHTML+= `<tr> <td style="width: 100px;"><img src="images/${response.data[i].profile_pic}" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
+        friends_panel.innerHTML += `<div class="friends-section"> <div> <img src="images/profile pic.jpg" class="profile-pic" /> </div> <div> ${response.data[i].first_name} ${response.data[i].last_name} </div> </div>`;
+        fr_table.innerHTML+= `<tr> <td style="width: 100px;"><img src="images/profile pic.jpg" class="profile-pic"></td> <td><strong>${response.data[i].first_name} ${response.data[i].last_name} </strong></td> <td style="text-align: right;"><label class="unblock">remove friend</label><i class="fas fa-user-times" id="remove-friend"></i></td> </tr>`;
 
       }
 
