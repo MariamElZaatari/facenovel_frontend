@@ -5,37 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
     <title>Sign In</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="container">
+    <!-- Logo and Slogan -->
     <div class="h1">
         <h1 class="h">facenovel</h1>
         <p class="msg">Facenovel helps you connect and share with the people in your life.</p>
     </div>
+
+    <!-- Login Section -->
     <div class="form">
+        <!-- Input -->
         <div class="inputs">
             <input type="text" placeholder="Username" class="input" id="username"><br>
             <input type="password" placeholder="Password" class="input" id="password"><br>
         </div>
         
+        <!-- Failed to Login -->
         <div id="alert" class="hidden">
             Username or Password is Wrong.
         </div>
 
+        <!-- Login Button -->
         <button class="login-btn" onclick="login()" id="login_btn">Log In</button><br>
+
+        <!-- No Account -->
         <div class="no">  
             <p class="no-account">Don't Have An Account Yet?</p>
         </div>
 
+        <!-- Sign Up Button -->
         <div class="ca">
             <a href="sign_up.html" class="create-btn">Create New Account</a>
         </div>
-
-
     </div>
+    <!-- End of Login Section -->
+
+    <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Login JS Script -->
     <script src="Scripts/login.js"></script>
+    
 </body>
 </html>
