@@ -7,25 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css" />
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
+    <!-- Icons -->
     <script src="https://kit.fontawesome.com/5503a86672.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+    <!-- Navigation Bar -->
     <div class="navbar">
+        <!-- Logo and Search -->
         <div class="logo-search">
+            <!-- Logo -->
             <a href="home.html"><img src="images/logo.webp" alt="" /></a>
+            <!-- Search -->
             <div class="search-input">
                 <a href="search.html"><span class="material-icons"> search </span></a>
-
                 <input type="text" placeholder="Search Facebook" />
             </div>
         </div>
-
+        <!-- Buttons -->
         <div class="info">
             <div class="user-info">
+                <!-- Notifications -->
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn"><span class="material-icons"> notifications
                         </span></button>
@@ -38,23 +43,29 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Settings -->
                 <a href="settings.html"><span class="material-icons"> settings </span></a>
-
+                <!-- Log out -->
                 <span class="material-icons"> logout </span>
-
+                <!-- Profile Page -->
                 <a href="profile_page.html" style="margin-right: 5px;">
                     <h4 id="fetched-first-name">Jogn </h4>
                 </a>
                 <a href="profile_page.html"><img class="profile-pic" src="images/profile pic.jpg" alt="" /></a>
             </div>
-
         </div>
     </div>
+    <!-- End of Navigation Bar -->
 
+    <!-- Page Content -->
     <div class="row" style="background:  #ecebeb;">
+        <!-- Left Column -->
         <div class="info-column" style="background:  #ecebeb;">
+
+            <!-- User Image -->
             <a href="profile_page.html"><img class="image2" src="images/prof.jpeg" /></a>
+
+            <!-- User Name -->
             <div class="first-element-info">
                 <a href="profile_page.html">
                     <h2><span id="fetched-first-name2">John</span> <span id="fetched-last-name">Doe</span></h2>
@@ -63,7 +74,9 @@
                 <hr>
             </div>
 
+            <!-- Navigation List -->
             <ul>
+                <!-- Item 1 -->
                 <a href="profile_page.html">
                     <li>
                         <i class="fa fa-user"></i>
@@ -71,13 +84,15 @@
                     </li>
                 </a>
 
-
+                <!-- Item 2 -->
                 <a href="#" id="friends">
                     <li>
                         <i class="fa fa-user-friends"></i>
                         <p>Friends</p>
                     </li>
                 </a>
+
+                <!-- Item 3 -->
                 <a href="blocked.html">
                     <li>
                         <i class="fa fa-ban"></i>
@@ -85,9 +100,17 @@
                     </li>
                 </a>
             </ul>
+            <!-- End of Navigation List -->
+
         </div>
+        <!-- End of Left Column -->
+
+        <!-- Middle Column -->
         <div class="middle-col" style="background:  #ecebeb; height: 100vh;">
+
+            <!-- New Post -->
             <div class="post create">
+                <!-- Post Content -->
                 <div class="post-top">
                     <div class="dp">
                         <img src="./images/prof.jpeg" alt="">
@@ -95,30 +118,37 @@
                     <input type="text" id="post-text" placeholder="What's on your mind?" />
                 </div>
 
+                <!-- Post Button -->
                 <div id="post-button" class="post-bottom" style="justify-content: flex-end;">
                     <div class="action" style="background-color: #2b69ee ;color: white;">
                         <i class="fa fa-send"></i>
                         <span>Post</span>
                     </div>
-
                 </div>
             </div>
-            <div id="posts-div">
-            </div>
-        </div>
-        <div class="friends-col" style="text-align: center;">
-            <h2>Friends</h2>
-            <div id="friends-panel-fetched">
 
-            </div>
+            <!-- Posts Feed -->
+            <div id="posts-div"></div>
+        </div>
+        <!-- End of Middle Column -->
+
+        <!-- Right Column -->
+        <div class="friends-col" style="text-align: center;">
+            <!-- Title -->
+            <h2>Friends</h2>
+            <!-- Friends Panel -->
+            <div id="friends-panel-fetched"></div>
+            <!-- See More Friends -->
             <button class="friends-btn" id="more-friends"><i class="fa fa-angle-down"
                     style="padding-right: 5px;"></i>All Friends</button>
         </div>
-
-        <!-- The Modal -->
+        <!-- End of Right Column -->
 
     </div>
+    <!-- End of Page Content -->
     </div>
+
+    <!-- Friends Modal -->
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -130,7 +160,7 @@
             <div class="modal-body" id="modal-body">
                 <div>
                     <div>
-                        <img src=""/>
+                        <img src="" />
                         <span>name</span>
                     </div>
                     <div>
@@ -140,12 +170,15 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="Scripts/home.js"></script>
-    <script src="Scripts/notification.js"></script>
+    <!-- End of Friends Modal -->
 
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Home JS Script -->
+    <script src="Scripts/home.js"></script>
+    <!-- Notification JS Script -->
+    <script src="Scripts/notification.js"></script>
 </body>
 
 </html>
