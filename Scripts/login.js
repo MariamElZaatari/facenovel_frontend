@@ -1,9 +1,9 @@
-var button=document.getElementById("login_btn");
+var button = document.getElementById("login_btn");
 
-button.onclick= function login(){
+button.onclick = function login() {
   //Retrieve HTML Login Elements
-  var username=document.getElementById("username");
-  var password=document.getElementById("password");
+  var username = document.getElementById("username");
+  var password = document.getElementById("password");
   var alert = document.getElementById("alert");
 
   // Append Data Required
@@ -18,10 +18,10 @@ button.onclick= function login(){
     data: bodyFormData,
     headers: { "Content-Type": "multipart/form-data" },
   })
-    .then(function ({data}) {
+    .then(function ({ data }) {
 
       //Handle Success
-      if (data.status==200){
+      if (data.status == 200) {
 
         //Store Retrieved Data in Local Storage
         localStorage.setItem("user_id", data.data.user_id);
@@ -29,9 +29,9 @@ button.onclick= function login(){
 
         //Redirect to Home Page
         window.location.href = "home.html";
-        
+
       }
-      else{
+      else {
         // Handle Error
         alert.classList.remove("hidden");
         setTimeout(() => {

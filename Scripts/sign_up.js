@@ -1,4 +1,5 @@
-var button = document.getElementById("sign_up_btn");
+// Retrieve Sign Up HTML Elements
+var sign_up_btn = document.getElementById("sign_up_btn");
 var first_name = document.getElementById("first_name");
 var last_name = document.getElementById("last_name");
 var username = document.getElementById("username");
@@ -9,6 +10,8 @@ var password_repeat = document.getElementById("password_repeat");
 var dob = document.getElementById("dob");
 var alert = document.getElementById("alert");
 
+
+// ---------- Validation Functions ----------
 function validateName(name) {
     return /^[A-Za-z\s]*$/.test(name.value);
 }
@@ -29,6 +32,8 @@ function validatePasswordMatch(password1, password2) {
 }
 
 function getNotValidInput() {
+
+    // Validate Each Input Using Corresponding Validation Function
     var not_valid_input = "";
     var valid_first_name = validateName(first_name)
     var valid_last_name = validateName(last_name)
@@ -37,6 +42,7 @@ function getNotValidInput() {
     var valid_password = validatePassword(password)
     var valid_password_match = validatePasswordMatch(password, password_repeat)
 
+    // Assign not_valid_input as Not Valid Input's Label
     if (!valid_first_name) {
         not_valid_input = "First Name"
     } else if (!valid_last_name) {
@@ -50,34 +56,52 @@ function getNotValidInput() {
     } else if (!valid_password_match) {
         not_valid_input = "Passwords Matching"
     }
-    console.log(not_valid_input)
+
     return not_valid_input;
 }
+// ------------------------------------------
 
+
+// -------- All Fields Required Function -------
 function isInputEmpty() {
 
+    // Check If Any Input Value is Empty
     if (first_name.value == "" || last_name.value == "" || username.value == "" || phone.value == "" || email.value == "" || password.value == "" || password_repeat.value == "" || dob.value == "") {
         return true;
     }
-    return false;
 
+    return false;
 }
-button.onclick = function signUp() {
+// ---------------------------------------------
+
+// --------- Sign Up On Click Function ---------
+sign_up_btn.onclick = function signUp() {
     
+    // Check All Field's Value not Empty
     if (isInputEmpty()) {
         alert.innerText = `All Fields are required.`
         alert.classList.remove("hidden");
         setTimeout(() => {
             alert.classList.add("hidden");
         }, 1500);
-    } else if (getNotValidInput() != "") {
+    }
+    
+    // Check All Field's Value Valid
+    else if (getNotValidInput() != "") {
         alert.innerText = `${getNotValidInput()} is not valid.`
         alert.classList.remove("hidden");
         setTimeout(() => {
             alert.classList.add("hidden");
         }, 1500);
-    } else {
+    }
+
+    // Add Account to Database Using Axios
+    else {
+        
+        // Retrieve Gender
         var gender = document.querySelector('input[name="gender"]:checked').value;
+        
+        // Append Data Required
         var bodyFormData = new FormData();
         bodyFormData.append('first_name', first_name.value);
         bodyFormData.append('last_name', last_name.value);
@@ -88,17 +112,18 @@ button.onclick = function signUp() {
         bodyFormData.append('password_repeat', password_repeat.value);
         bodyFormData.append('dob', dob.value);
         bodyFormData.append('gender', gender);
-
+        
+        // Fetch Using Axios
         axios({
             method: "post",
             url: "../facebook-back-end/router/router.php/Auth/signup",
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
         })
-            .then(function ({ data }) {
-                //handle success
-                //redirect
-                window.location.href = "index.html";
-            })
+        .then(function ({ data }) {
+            //Redirect to Login Page
+            window.location.href = "index.html";
+        })
     }
 }
+// ---------------------------------------------
