@@ -5,7 +5,7 @@ async function init() {
 
     // ------------ User Info Section ------------
 
-    //---------Fetch User Info -------
+    // ---------Fetch User Info -------
 
     // Append Data Required
     var bodyFormData = new FormData();
@@ -35,7 +35,7 @@ async function init() {
     });
 
 
-    //--------- Assign Name -------
+    // --------- Assign Name -------
 
     // Retrieve Name From Local Storage
     var first_name = localStorage.getItem("first_name")
@@ -50,7 +50,7 @@ async function init() {
 
     // -------------- Posts Section --------------
 
-    //---------- Post New Status -----------
+    // ---------- Post New Status -----------
     var post_btn = document.getElementById("post-button");
 
     post_btn.onclick = function postStatus() {
@@ -81,7 +81,7 @@ async function init() {
     }
 
 
-    //---------- Friends Posts -----------
+    // ---------- Friends Posts -----------
     var posts_div = document.getElementById("posts-div");
 
     // Append Data Required
@@ -149,7 +149,7 @@ async function init() {
 
     // -------------- Friend Section --------------
     
-    //--------- Friends Right Panel -------
+    // --------- Friends Right Panel -------
     
     // Append Data Required
     var bodyFormData = new FormData();
@@ -198,7 +198,7 @@ async function init() {
     });
     
 
-    //------- All Friends Modal ---------
+    // ------- All Friends Modal ---------
     
     // Retrieve HTML Modal Elements and More Friends Buttons 
     var modal = document.getElementById("myModal");
