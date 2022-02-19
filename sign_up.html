@@ -5,51 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signup.css">
     <title>Sign In</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 
 <body class="container">
+
+    <!-- Logo and Slogan -->
     <div class="h1">
         <h1 class="h">facenovel</h1>
         <p class="msg">facenovel helps you connect and share with the people in your life.</p>
     </div>
+
+    <!-- Sign Up Section -->
     <div class="form">
+
+        <!-- Name -->
         <div class="name">
             <input type="text" placeholder="First Name" class="first" id="first_name">
             <input type="text" placeholder="Last Name" class="last" id="last_name">
         </div>
         <input type="username" placeholder="Username" class="first" id="username">
+
+        <!-- Phone -->
         <input type="text" placeholder="Phone" class="last" id="phone">
 
+        <!-- Email -->
         <input type="text" placeholder="Email" class="input" id="email">
+
+        <!-- Password -->
         <input type="password" placeholder="Password" class="first" id="password">
         <input type="password" placeholder="Repeat Password" class="last" id="password_repeat">
 
-        <label class="label">Date of birth: </label><input type="date" class="last" id="dob">
-           
+        <!-- DOB -->
+        <label class="label">Date of birth: </label>
+        <input type="date" class="last" id="dob">
+
+        <!-- Gender -->
         <div class="gen">
-            <label class="label"  id="gen">Gender: </label>
+            <label class="label" id="gen">Gender: </label>
             <input type="radio" id="male" name="gender" value="M" class="radio">
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="F" class="radio">
             <label for="female">Female</label>
         </div>
-        <div id="alert" class="hidden">
-            
-        </div>
+
+        <!-- Error Message -->
+        <div id="alert" class="hidden"></div>
+
+        <!-- Already Have Account -->
         <button class="login-btn" id="sign_up_btn">Create New Account</button><br>
         <div class="no">
             <p class="no-account">Already Have An Account?</p>
         </div>
 
+        <!-- Login Button -->
         <div class="ca">
-
             <a href="index.html" class="create-btn">Log In</a>
         </div>
+
     </div>
+    <!-- End of Sign Up Section -->
+
+    <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Signup JS Script -->
     <script src="Scripts/sign_up.js"></script>
+    
 </body>
 
 </html>
